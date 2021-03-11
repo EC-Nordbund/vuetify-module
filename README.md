@@ -99,8 +99,7 @@ You'll then be able to have autocompletion in Context (`ctx.$vuetify`) and Vue i
 ## Development
 
 - Clone this repository
-- Install dependencies using `yarn install` or `npm install`
-- Start development server using `yarn dev` or `npm run dev`
+- Install dependencies using `yarn`
 
 ## License
 
