@@ -8,13 +8,14 @@ const iconFonts = {
     "https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css",
 };
 
-
+import { ModuleThis } from "@nuxt/types/config/module";
 import { Options } from "./options";
 
-export function iconFont(options: Options) {
-  const url = iconFonts[options.iconFont as keyof typeof iconFonts] ?? options.iconFont;
+export function iconFont(this: ModuleThis, options: Options) {
+  const url =
+    iconFonts[options.iconFont as keyof typeof iconFonts] ?? options.iconFont;
 
-  this.options.head!.link!.push({
+  (this.options.head! as any).link!.push({
     rel: "stylesheet",
     type: "text/css",
     href: url,

@@ -1,7 +1,8 @@
+import { ModuleThis } from "@nuxt/types/config/module";
 import { resolve } from "path";
 import { Options } from "./options";
 
-export function vuetifyInstall(options: Options) {
+export function vuetifyInstall(this: ModuleThis, options: Options) {
   const cleanOptions = { ...options };
   delete cleanOptions.iconInjector;
   delete cleanOptions.iconInjector;

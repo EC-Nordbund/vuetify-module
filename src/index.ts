@@ -51,16 +51,16 @@ Please checkout the drawbacks of the iconinjector!`);
   }
 
   if (!this.nuxt.options.component) {
-    registerComponents();
+    registerComponents.call(this);
   } else {
     throw "[Vuetify-Module] You have to set components: true in your nuxt.config.js for vuetify-module to work!";
   }
 
   if (options.iconInjector) {
-    iconInjector(options);
+    iconInjector.call(this, options);
   }
 
-  vuetifyInstall(options);
+  vuetifyInstall.call(this, options);
 
   const addStyles = [];
 
@@ -73,16 +73,16 @@ Please checkout the drawbacks of the iconinjector!`);
   sass.implementation = scss.implementation = dartSass;
 
   if (options.font) {
-    setFont(options, addStyles);
+    setFont.call(this, options, addStyles);
   }
 
   // Custom variables
   if (options.customVariables) {
-    customVariables(options, addStyles);
+    customVariables.call(this, options, addStyles);
   }
 
   if (options.iconFont) {
-    iconFont(options);
+    iconFont.call(this, options);
   }
 
   if (addStyles.length > 0) {

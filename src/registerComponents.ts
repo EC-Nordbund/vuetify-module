@@ -1,7 +1,8 @@
 import { resolve, dirname, join } from "path";
 import { readdirSync, readFileSync } from "fs";
+import { ModuleThis } from "@nuxt/types/config/module";
 
-export function registerComponents() {
+export function registerComponents(this: ModuleThis) {
   const extraComponents: [string, string][] = [];
 
   // Scan some dir...
@@ -29,7 +30,7 @@ export function registerComponents() {
   extraComponents.forEach(([file, name]) => {
     this.addTemplate({
       filename: `vuetify/extra-components/${name}.js`,
-      src: resolve(__dirname, "base-component.js"),
+      src: resolve(__dirname, "../templates/base-component.js"),
       options: {
         file: file.split("node_modules")[1].slice(1),
         name,
