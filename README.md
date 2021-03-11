@@ -1,8 +1,6 @@
 <p align="center">
   <a href="https://npmjs.com/package/@ec-nordbund/vuetify-module"><img src="https://img.shields.io/npm/v/@ec-nordbund/vuetify-module.svg?style=flat-square" alt="npm downloads"></a>
   <a href="https://npmjs.com/package/@ec-nordbund/vuetify-module"><img src="https://img.shields.io/npm/dt/@ec-nordbund/vuetify-module.svg?style=flat-square" alt="npm version"></a>
-  <a href="https://circleci.com/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/circleci/project/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="circle ci"></a>
-  <a href="https://codecov.io/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/codecov/c/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="coverage"></a>
   <a href="https://www.npmjs.com/package/@ec-nordbund/vuetify-module"><img src="https://img.shields.io/npm/l/@ec-nordbund/vuetify-module.svg?style=flat-square" alt="License"></a>
 </p>
 
@@ -51,7 +49,7 @@ yarn add --dev @ec-nordbund/vuetify-module # or npm install --save-dev @ec-nordb
 ### `customVariables`
 
 - Type: `Array`
-  - Items: `String`
+- Items: `String`
 - Default: `[]`
 
 Provide a way to customize Vuetify SASS variables.  
