@@ -50,7 +50,7 @@ Please checkout the drawbacks of the iconinjector!`);
     }
   }
 
-  if (this.nuxt.options.component) {
+  if (!this.nuxt.options.component) {
     registerComponents();
   } else {
     throw "[Vuetify-Module] You have to set components: true in your nuxt.config.js for vuetify-module to work!";

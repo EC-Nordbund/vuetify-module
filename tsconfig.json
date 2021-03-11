@@ -6,5 +6,9 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "outDir": "type-dist"
-  }
+  },
+  "exclude": [
+    "dist",
+    "type-dist"
+  ]
 }

@@ -5,19 +5,17 @@
 </p>
 
 > [Vuetify 2](https://vuetifyjs.com) module for [Nuxt.js](https://nuxtjs.org)
-
+> Inspired by https://github.com/nuxt-community/vuetify-module/
 
 ## Setup
 
-1. Add `@ec-nordbund/vuetify-module` dependency to your project
+1. Add `@ec-nordbund/vuetify-module` dependency and `vuetify` to your project
 
 ```bash
-yarn add --dev @ec-nordbund/vuetify-module # or npm install --save-dev @ec-nordbund/vuetify-module
+yarn add --dev @ec-nordbund/vuetify-module vuetify # or npm install --save-dev @ec-nordbund/vuetify-module vuetify
 ```
 
 2. Add `@ec-nordbund/vuetify-module` to the `buildModules` section of `nuxt.config.js`
-
-:warning: If you are using Nuxt `< 2.9.0`, use `modules` instead.
 
 ```js
 {
@@ -30,6 +28,8 @@ yarn add --dev @ec-nordbund/vuetify-module # or npm install --save-dev @ec-nordb
   ]
 }
 ```
+
+> This module is only tested for nuxt 2.15
 
 ### Using top level options
 
