@@ -46,10 +46,14 @@ yarn add --dev @ec-nordbund/vuetify-module # or npm install --save-dev @ec-nordb
 
 ## Options
 
+All options of Vuetify can be set.
+
+Additional the following options can be used.
+
+
 ### `customVariables`
 
-- Type: `Array`
-- Items: `String`
+- Type: `string[]`
 - Default: `[]`
 
 Provide a way to customize Vuetify SASS variables.  
@@ -76,6 +80,18 @@ export default {
 ```
 
 > The list of customizable variables can be found by looking at the files [here](https://github.com/vuetifyjs/vuetify/tree/master/packages/vuetify/src/styles/settings).
+
+
+### `iconInjector`
+- Type: `false | {icons: { [name: string]: string }, components: { [name: string]: string[] }}`
+- Default: `{icons: {}, components: {}}`
+### `iconFont`
+- Type: `'mdi', 'md', 'fa' 'fa4'`
+- Default: `undefined`
+### `font`
+- Type: `string`
+- Default: `undefined`
+
 
 
 ## TypeScript

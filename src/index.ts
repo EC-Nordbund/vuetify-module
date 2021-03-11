@@ -9,6 +9,7 @@ import { setFont } from "./setFont";
 import { customVariables } from "./customVariables";
 import { iconFont } from "./iconFont";
 import { Options } from "./options";
+import consola from "consola";
 
 interface SassOptions {
   implementation?: any;
@@ -21,7 +22,6 @@ const defaults: Options = {
     icons: {},
     components: {},
   },
-  iconFont: false,
 };
 
 const mod: Module<Options> = function (moduleOptions: Options) {
@@ -31,11 +31,34 @@ const mod: Module<Options> = function (moduleOptions: Options) {
     moduleOptions || {},
   ]);
 
+  // validate options
+  if (
+    options.iconInjector &&
+    options.iconFont &&
+    process.env.NODE_ENV !== "production"
+  ) {
+    consola.warn(
+      `You use the iconFont option AND the iconInjector this is not recomended.`
+    );
+
+    if (options.iconFont === "mdi") {
+      consola.warn(`You use iconFont = 'mdi' so you import the full icon-font.
+You can set iconInjector = false and no change in behavior is expected.
+In > 90% of cases iconInjector can "treeshake" the icons so your users
+dont load the full font. For this you can remove the iconFont option.
+Please checkout the drawbacks of the iconinjector!`);
+    }
+  }
+
+  if (this.nuxt.options.component) {
+    registerComponents();
+  } else {
+    throw "[Vuetify-Module] You have to set components: true in your nuxt.config.js for vuetify-module to work!";
+  }
+
   if (options.iconInjector) {
     iconInjector(options);
   }
-
-  registerComponents();
 
   vuetifyInstall(options);
 

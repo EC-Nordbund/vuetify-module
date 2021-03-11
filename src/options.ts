@@ -8,7 +8,7 @@ export interface Options extends Partial<UserVuetifyPreset> {
     components: { [name: string]: string[]; };
   } |
   false;
-  iconFont?: false | string;
+  iconFont?: string;
   font?: string |
   {
     family?: string | string[];

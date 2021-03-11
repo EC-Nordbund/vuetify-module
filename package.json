@@ -3,7 +3,7 @@
   "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc && rollup -c",
     "prepublishOnly": "yarn build"
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@ec-nordbund/vuetify-icon-injector": "2.1.0",
+    "consola": "^2.15.3",
     "deepmerge": "4.2.2",
     "sass": "1.32.8"
   },
