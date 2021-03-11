@@ -1,9 +1,7 @@
-import commonjs from "@rollup/plugin-commonjs";
-import node from "@rollup/plugin-node-resolve";
 import esbuild from "rollup-plugin-esbuild";
-import { terser } from "rollup-plugin-terser";
+import dts from "rollup-plugin-dts";
 
-export default {
+export default [{
   input: {
     index: 'src/index.ts'
   },
@@ -11,9 +9,14 @@ export default {
     dir: 'dist'
   },
   plugins: [
-    node(),
-    commonjs(),
-    esbuild(),
-    terser()
+    esbuild()
   ]
-}
+}, {
+  input: "./type-dist/index.d.ts",
+  output: [
+    {
+      file: "dist/index.d.ts", format: "es"
+    }
+  ],
+  plugins: [dts()],
+}]
