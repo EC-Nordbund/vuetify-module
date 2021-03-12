@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@ec-nordbund/vuetify-icon-injector": "2.1.0",
-    "consola": "^2.15.3",
+    "consola": "2.15.3",
     "deepmerge": "4.2.2",
     "sass": "1.32.8"
   },
