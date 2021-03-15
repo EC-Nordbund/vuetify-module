@@ -24,7 +24,7 @@ export function registerComponents(this: ModuleThis) {
     do {
       m = re.exec(file);
       if (m) {
-        extra[0] += `import {${m[1]}} from '${f}'\n`;
+        extra[0] += `import {${m[1]}} from ${JSON.stringify(f)}\n`;
         extra[1] += `Vue.component('${m[1]}', ${m[1]})\n`;
 
         extraComponents.push([f, m[1]]);
