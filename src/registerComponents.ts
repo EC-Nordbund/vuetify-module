@@ -12,6 +12,8 @@ export function registerComponents(this: ModuleThis) {
     .filter((v) => v[0] == "V")
     .map((p) => join(basePath, p, "index.js"));
 
+  const extra = ['import Vue from "vue";\n', ""];
+
   folders.forEach((f) => {
     const file = readFileSync(f, "utf8");
 
@@ -22,21 +24,23 @@ export function registerComponents(this: ModuleThis) {
     do {
       m = re.exec(file);
       if (m) {
+        extra[0] += `import {${m[1]}} from '${f}'\n`;
+        extra[1] += `Vue.component('${m[1]}', ${m[1]})`;
+
         extraComponents.push([f, m[1]]);
       }
     } while (m);
   });
 
-  extraComponents.forEach(([file, name]) => {
-    this.addTemplate({
-      filename: `vuetify/extra-components/${name}.js`,
-      src: resolve(__dirname, "../templates/base-component.js"),
-      options: {
-        file: file.split("node_modules")[1].slice(1),
-        name,
-      },
-    });
+  // extraComponents.forEach(([file, name]) => {
+  this.addTemplate({
+    filename: `vuetify/extra-components.js`,
+    src: resolve(__dirname, "../templates/extra-component.js"),
+    options: {
+      cmps: extra.join("\n"),
+    },
   });
+  // });
 
   this.nuxt.hook("components:dirs", (dirs: any[]) => {
     dirs.push({
