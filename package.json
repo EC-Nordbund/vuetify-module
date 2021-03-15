@@ -23,10 +23,10 @@
     "@rollup/plugin-commonjs": "17.1.0",
     "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "11.2.0",
-    "@types/node": "14.14.33",
-    "esbuild": "0.9.0",
+    "@types/node": "14.14.34",
+    "esbuild": "0.9.1",
     "nuxt": "2.15.3",
-    "rollup": "2.41.1",
+    "rollup": "2.41.2",
     "rollup-plugin-dts": "3.0.1",
     "rollup-plugin-esbuild": "3.0.2",
     "rollup-plugin-terser": "7.0.2",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@ec-nordbund/vuetify-icon-injector": "2.1.0",
-    "consola": "^2.15.3",
+    "consola": "2.15.3",
     "deepmerge": "4.2.2",
     "sass": "1.32.8"
   },

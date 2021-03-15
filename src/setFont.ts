@@ -15,6 +15,10 @@ export function setFont(this: ModuleThis, options: Options, addStyles: any[]) {
   const family = `${font}:100,300,400,500,700,900&display=swap`;
 
   if (this.options.modules!.some((mod) => mod === "nuxt-webfontloader")) {
+    this.options.webfontloader = this.options.webfontloader || {}
+    this.options.webfontloader.google = this.options.webfontloader.google || {}
+    this.options.webfontloader.google.families = [...this.options.webfontloader.google.families || [], family]
+  } else {
     (this.options.head! as any).link!.push({
       rel: "stylesheet",
       type: "text/css",
