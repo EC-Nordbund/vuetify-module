@@ -35,7 +35,7 @@ export function registerComponents(this: ModuleThis) {
   // extraComponents.forEach(([file, name]) => {
   this.addTemplate({
     filename: `vuetify/extra-components.js`,
-    src: resolve(__dirname, "../templates/extra-component.js"),
+    src: resolve(__dirname, "../templates/extra-components.js"),
     options: {
       cmps: extra.join("\n"),
     },
