@@ -32,6 +32,23 @@ export function registerComponents(this: ModuleThis) {
     } while (m);
   });
 
+  const basePath2 = dirname(require.resolve("vuetify/lib/directives"));
+
+  const f = readdirSync(basePath2)
+    .filter((v) => v.includes("."))
+    .map((f) => {
+      return [
+        join(basePath2, f, "index.js"),
+        f
+          .split("-")
+          .map((v) => `${v[0].toUpperCase()}${v.slice(1)}`)
+          .join(""),
+      ];
+    }).forEach([file, name] =>{
+      extra[0] += `import {${name}} from ${JSON.stringify(file)}`
+      extra[1] += `Vue.directive(${JSON.stringify(name)}, ${name})`
+    })
+
   // extraComponents.forEach(([file, name]) => {
   this.addTemplate({
     filename: `vuetify/extra-components.js`,
