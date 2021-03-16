@@ -3,6 +3,8 @@ import { resolve } from "path";
 import { Options } from "./options";
 
 export function vuetifyInstall(this: ModuleThis, options: Options) {
+  ;(this.options.build!.transpile! as string[]).push('vuetify/lib')
+  
   const cleanOptions = { ...options };
   delete cleanOptions.iconInjector;
   delete cleanOptions.iconInjector;
