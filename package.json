@@ -3,7 +3,7 @@
   "module": "dist/index.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "author": {
     "name": "Sebastian Krüger",
     "url": "https://github.com/mathe42"
