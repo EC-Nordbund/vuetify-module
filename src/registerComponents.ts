@@ -14,18 +14,20 @@ export function registerComponents(this: ModuleThis) {
 
   const extra = ['import Vue from "vue";\n', ""];
 
+  extra[0] += 'import { createSimpleFunctional } from "vuetify/util/helpers"\n'
+
   folders.forEach((f) => {
     const file = readFileSync(f, "utf8");
 
-    var re = /const (V[a-zA-Z]*) = createSimpleFunctional\('/g;
+    var re = /const (V[a-zA-Z]*) = createSimpleFunctional\((.*)\)'/g;
 
     var m;
 
     do {
       m = re.exec(file);
       if (m) {
-        extra[0] += `import {${m[1]}} from ${JSON.stringify(f)}\n`;
-        extra[1] += `Vue.component('${m[1]}', ${m[1]})\n`;
+        // extra[0] += `import {${m[1]}} from ${JSON.stringify(f)}\n`;
+        extra[1] += `Vue.component('${m[1]}', createSimpleFunctional(${m[2]}))\n`;
 
         extraComponents.push([f, m[1]]);
       }
@@ -35,7 +37,7 @@ export function registerComponents(this: ModuleThis) {
   const basePath2 = dirname(require.resolve("vuetify/lib/directives"));
 
   const f = readdirSync(basePath2)
-    .filter((v) => v.includes("."))
+    .filter((v) => !v.includes("."))
     .map((f) => {
       return [
         join(basePath2, f, "index.js"),
@@ -43,11 +45,12 @@ export function registerComponents(this: ModuleThis) {
           .split("-")
           .map((v) => `${v[0].toUpperCase()}${v.slice(1)}`)
           .join(""),
-      ];
-    }).forEach([file, name] =>{
-      extra[0] += `import {${name}} from ${JSON.stringify(file)}`
-      extra[1] += `Vue.directive(${JSON.stringify(name)}, ${name})`
+      ] as [string, string];
     })
+    .forEach(([file, name]) => {
+      extra[0] += `import {${name}} from ${JSON.stringify(file)}\n`;
+      extra[1] += `Vue.directive(${JSON.stringify(name)}, ${name})\n`;
+    });
 
   // extraComponents.forEach(([file, name]) => {
   this.addTemplate({
