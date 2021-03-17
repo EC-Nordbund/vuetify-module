@@ -14,7 +14,7 @@ export function registerComponents(this: ModuleThis) {
 
   const extra = ['import Vue from "vue";\n', ""];
 
-  extra[0] += 'import { createSimpleFunctional } from "vuetify/util/helpers"\n'
+  extra[0] += 'import { createSimpleFunctional } from "vuetify/lib/util/helpers"\n'
 
   folders.forEach((f) => {
     const file = readFileSync(f, "utf8");
