@@ -19,7 +19,7 @@ export function registerComponents(this: ModuleThis) {
   folders.forEach((f) => {
     const file = readFileSync(f, "utf8");
 
-    var re = /const (V[a-zA-Z]*) = createSimpleFunctional\((.*)\)'/g;
+    var re = /const (V[a-zA-Z]*) = createSimpleFunctional\((.*)\)/g;
 
     var m;
 
