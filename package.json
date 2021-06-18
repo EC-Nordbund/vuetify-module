@@ -19,13 +19,13 @@
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
-    "@nuxt/types": "2.15.3",
+    "@nuxt/types": "2.15.7",
     "@rollup/plugin-commonjs": "19.0.0",
     "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "11.2.0",
     "@types/node": "15.12.3",
     "esbuild": "0.12.9",
-    "nuxt": "2.15.3",
+    "nuxt": "2.15.7",
     "rollup": "2.52.1",
     "rollup-plugin-dts": "3.0.1",
     "rollup-plugin-esbuild": "4.5.0",
