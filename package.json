@@ -31,7 +31,7 @@
     "rollup-plugin-esbuild": "4.5.0",
     "rollup-plugin-terser": "7.0.2",
     "typescript": "4.3.4",
-    "vuetify": "2.4.6"
+    "vuetify": "2.5.4"
   },
   "dependencies": {
     "@ec-nordbund/vuetify-icon-injector": "2.3.4",
