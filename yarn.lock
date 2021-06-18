@@ -864,10 +864,13 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@ec-nordbund/vuetify-icon-injector@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@ec-nordbund/vuetify-icon-injector/-/vuetify-icon-injector-2.2.0.tgz#2fb1924117e2bf93698ac5931bc7ef9378250623"
-  integrity sha512-n2eZuhtshpfO7zgGAeyIst71y3vBUMTa7ruzc2g0Ot52eWQfl9OafFktQ7nvaBOoiHjiD9xhwUk9PmI+eI/ugw==
+"@ec-nordbund/vuetify-icon-injector@2.3.4":
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/@ec-nordbund/vuetify-icon-injector/-/vuetify-icon-injector-2.3.4.tgz#b001b9522ca971d34ce0da14215e8b1b2091fc9c"
+  integrity sha512-Nah1hjS1aLyQL9d5znJ3yV26EQnwOzZISUYxxCmqkAcvYaO5hJKw90m4Le/t1J/OOqT1GiBDPkPml2GrbrKRSg==
+  dependencies:
+    camel-to-kebab "1.1.0"
+    tslib "2.3.0"
 
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
@@ -2457,6 +2460,11 @@ camel-case@^4.1.1:
   dependencies:
     pascal-case "^3.1.2"
     tslib "^2.0.3"
+
+camel-to-kebab@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/camel-to-kebab/-/camel-to-kebab-1.1.0.tgz#0e0bd1307c7d9379d4b214e534a1601eea7043eb"
+  integrity sha512-0wc1U9DZOTbpOzdtwtvMVN4tnRCEjS68lJ6pPmCJKdXX8HlydROS8N4l9mYwIscEyx76az7m2cGi3a4oRmI3IQ==
 
 camelcase@^5.0.0:
   version "5.3.1"
@@ -7572,6 +7580,11 @@ ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
+
+tslib@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
 tslib@^1.9.0:
   version "1.14.1"
