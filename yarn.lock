@@ -864,7 +864,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@ec-nordbund/vuetify-icon-injector@^2.2.0":
+"@ec-nordbund/vuetify-icon-injector@2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ec-nordbund/vuetify-icon-injector/-/vuetify-icon-injector-2.2.0.tgz#2fb1924117e2bf93698ac5931bc7ef9378250623"
   integrity sha512-n2eZuhtshpfO7zgGAeyIst71y3vBUMTa7ruzc2g0Ot52eWQfl9OafFktQ7nvaBOoiHjiD9xhwUk9PmI+eI/ugw==
