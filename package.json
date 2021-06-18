@@ -28,7 +28,7 @@
     "nuxt": "2.15.3",
     "rollup": "2.41.2",
     "rollup-plugin-dts": "3.0.1",
-    "rollup-plugin-esbuild": "3.0.2",
+    "rollup-plugin-esbuild": "4.5.0",
     "rollup-plugin-terser": "7.0.2",
     "typescript": "4.2.3",
     "vuetify": "2.4.6"
